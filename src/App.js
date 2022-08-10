@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { NavbarApp } from "./components/Navbar/NavbarApp";
+import { SliderApp } from "./components/Slider/SliderApp";
+import { InfoApp } from "./components/Information/InfoApp";
+import { CardApp } from "./components/Cards/CardApp";
+import { FooterApp } from "./components/Footer/FooterApp";
+import { PersonajesApp } from "./components/Personajes/PersonajesApp";
+import { PlanetasApp } from "./components/Planetas/PlanetasApp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+      <NavbarApp />
+      <SliderApp />
+      <InfoApp />
+      <CardApp />
+        <Routes>
+          <Route path="personaje" element={<PersonajesApp />} />
+          <Route path="planeta" element={<PlanetasApp />} />
+        </Routes>
+      </BrowserRouter>
+      <FooterApp />
+    </>
   );
 }
 
