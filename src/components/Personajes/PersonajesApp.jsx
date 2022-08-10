@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { UsePerson } from "../../Hooks/UsePerson";
 
 export const PersonajesApp = () => {
+
+  const { getallPerson } = UsePerson();
+
+  useEffect(() => {
+    getallPerson();
+    console.log(getallPerson());
+  }, []);
+
   return (
+
+
     <>
     <div className="w-screen h-auto flex justify-center ">
         <h2 className="text-white uppercase text-6xl">PERSONAJES</h2>
