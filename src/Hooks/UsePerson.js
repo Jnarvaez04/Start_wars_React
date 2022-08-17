@@ -3,7 +3,7 @@ import React from 'react'
 
 export const UsePerson = () => {
 
-    // const getallPerson = () => {
+    const getallPerson = () => {
 
         var requestOptions = {
             method: 'GET',
@@ -16,7 +16,7 @@ export const UsePerson = () => {
             .catch(error => console.log('error', error));
     }
 
-  // return {
-  //   getallPerson
-  // };
-// }
+  return {
+    getallPerson
+  };
+}
